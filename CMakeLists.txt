@@ -67,3 +67,20 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
     # Add user defined libraries
 )
+
+# Generate HEX file
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.hex
+    COMMENT "Generating HEX file"
+)
+
+# Generate BIN file
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin
+    COMMENT "Generating BIN file"
+)
+
+# Add HEX and BIN to clean target
+set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
+    ADDITIONAL_CLEAN_FILES "${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.hex;${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin"
+)
