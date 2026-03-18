@@ -1,0 +1,55 @@
+---
+# =============================================
+# 常用 clang-format 配置文件
+# 基于 LLVM 风格，广泛用于开源项目
+# =============================================
+
+Language:        Cpp
+BasedOnStyle:    LLVM
+
+# --- 缩进与空格 ---
+IndentWidth:             4           # 缩进宽度（4空格）
+TabWidth:                8           # Tab 宽度
+UseTab:                  Never       # 不使用 Tab
+IndentCaseLabels:       false       # case 标签不缩进
+IndentPPDirectives:     None        # 预处理指令缩进风格
+
+# --- 大括号与换行 ---
+BreakBeforeBraces:      Attach      # 大括号紧贴上一行
+AllowShortIfStatementsOnASingleLine: Never  # if 语句不单行
+AllowShortLoopsOnASingleLine: false         # 循环不单行
+AllowShortFunctionsOnASingleLine: Inline  # 内联函数可单行
+
+# --- 列限制 ---
+ColumnLimit:             100         # 每行最多100字符
+
+# --- 对齐方式 ---
+PointerAlignment:        Right       # 指针 * 靠右: int *ptr
+ReferenceAlignment:     Right       # 引用 & 靠右: int &ref
+AlignAfterOpenBracket:  Align       # 左括号后对齐
+AlignOperands:           Align       # 操作数对齐
+AlignTrailingComments:  true        # 对齐尾随注释
+
+# --- 空格控制 ---
+SpaceBeforeParens:       ControlStatements  # 控制语句后加空格
+SpaceAfterCStyleCast:    false              # C风格转换后不加空格
+SpaceBeforeCpp11BracedList: false           # 大括号列表前不加空格
+
+# --- 容器与括号 ---
+SpacesInParentheses:     false       # 括号内不加空格
+SpacesInSquareBrackets:  false       # 方括号内不加空格
+SpacesInAngles:          Never       # 尖括号内不加空格
+
+# --- 包含头文件 ---
+SortIncludes:            CaseSensitive  # 头文件按字母排序
+
+# --- 注释 ---
+ReflowComments:          Always      # 重新格式化注释
+SpacesBeforeTrailingComments: 1     # 行尾注释前1空格
+
+# --- 命名空间 ---
+NamespaceIndentation:   None        # 命名空间不缩进
+
+# --- 构造函数 ---
+BreakConstructorInitializers: BeforeColon  # 初始化列表冒号前换行
+ConstructorInitializerIndentWidth: 4        # 初始化列表缩进宽度
