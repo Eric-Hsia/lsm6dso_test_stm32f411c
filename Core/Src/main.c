@@ -101,6 +101,7 @@ int main(void) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
+        lsm6dsox_self_test();
         HAL_Delay(1);
     }
     /* USER CODE END 3 */
