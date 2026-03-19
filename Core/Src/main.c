@@ -102,7 +102,7 @@ int main(void) {
 
         /* USER CODE BEGIN 3 */
         lsm6dsox_self_test();
-        HAL_Delay(1);
+        HAL_Delay(1000);
     }
     /* USER CODE END 3 */
 }
