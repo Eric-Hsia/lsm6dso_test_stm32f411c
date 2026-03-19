@@ -53,7 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void lsm6dsox_self_test(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
