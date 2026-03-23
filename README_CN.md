@@ -1,6 +1,9 @@
 # LSM6DSOX/LSM6DSOW测试
+
 * [English version](./README.md)
+
 ## 1 - 模块介绍
+
   见证 ST 的最新 6 轴 IMU 传感器：LSM6DSOX/LSM6DSOW。  
   该 IMU 传感器提供 6 自由度（3 轴线性加速度 + 3 轴角速度），不同量程和更新速率范围。  
   加速度计：±2/±4/±8/±16 g，更新频率 1.6 Hz~6.7 kHz。  
@@ -10,4 +13,5 @@
   进阶场景下，可挂载外部 I2C/SPI 设备，用于光学稳定等扩展功能。
 
 ## 2 - 参考信息
+
 * [LSM6DSO](https://www.st.com/en/mems-and-sensors/lsm6dso.html)
