@@ -2,6 +2,10 @@
 
 * [English version](./README.md)
 
+> LSM6DSOW 传感器模块
+
+!["LSM6DSOW 传感器模块 3D 视图"](./images/LSM6DSOWTR-Top.png)
+
 ## 1 - 模块介绍
 
   见证 ST 的最新 6 轴 IMU 传感器：LSM6DSOX/LSM6DSOW。  

@@ -1,6 +1,10 @@
 # LSM6DSOX/LSM6DSOW Test
 
 * [中文版本](./README_CN.md)
+  
+> LSM6DSOW Sensor Module
+
+!["LSM6DSOW sensor module 3D View"](./images/LSM6DSOWTR-Top.png)
 
 ## 1 - Introduction
 
