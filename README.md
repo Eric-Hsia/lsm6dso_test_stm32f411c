@@ -4,7 +4,7 @@
   
 > LSM6DSOW Sensor Module
 
-!["LSM6DSOW sensor module 3D View"](./images/LSM6DSOWTR-Top.png)
+![LSM6DSOW sensor module 3D View](./images/LSM6DSOWTR-Top.png)
 
 ## 1 - Introduction
 
