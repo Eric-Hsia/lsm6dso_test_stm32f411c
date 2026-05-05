@@ -17,15 +17,15 @@
  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include "main.h"
 #include "gpio.h"
 #include "i2c.h"
-#include "main.h"
 #include "usart.h"
 
 #include "lsm6dsox_reg.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "platform.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,7 +92,8 @@ int main(void) {
     MX_I2C1_Init();
     MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
-
+    lsm6dsox_self_test();
+    lsm6dsox_read_data_polling();
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -101,7 +102,7 @@ int main(void) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        lsm6dsox_self_test();
+
         HAL_Delay(1000);
     }
     /* USER CODE END 3 */

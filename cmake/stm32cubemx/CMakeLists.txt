@@ -25,12 +25,14 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/i2c.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/usart.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/test_examples/lsm6dsox_self_test.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/test_examples/lsm6dsox_read_data_polling.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/stm32f4xx_it.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/stm32f4xx_hal_msp.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/sysmem.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/syscalls.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../startup_stm32f411xe.s
     ${CMAKE_CURRENT_SOURCE_DIR}/../../lsm6dsox-pid/lsm6dsox_reg.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/platform.c
 
 )
 
@@ -96,3 +98,8 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES ADDITIONAL_CLEAN_FILES ${
 if((CMAKE_C_STANDARD EQUAL 90) OR (CMAKE_C_STANDARD EQUAL 99))
     message(ERROR "Generated code requires C11 or higher")
 endif()
+
+# 添加浮点打印支持
+target_link_options(${PROJECT_NAME} PRIVATE
+    -u _printf_float
+)

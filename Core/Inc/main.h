@@ -54,6 +54,11 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 void lsm6dsox_self_test(void);
+void lsm6dsox_read_data_polling(void);
+
+
+
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
